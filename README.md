@@ -1,2 +1,2 @@
 # self_balancing_robot
-Project
+Self Balancing Robot Project
