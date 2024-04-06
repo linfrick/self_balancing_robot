@@ -31,11 +31,11 @@ void setMotors(int leftMotorSpeed, int rightMotorSpeed) {
     motor_left.run(BACKWARD);
   }
   if(rightMotorSpeed >= 0) {
-    motor_right.setSpeed(leftMotorSpeed);
+    motor_right.setSpeed(rightMotorSpeed);
     motor_right.run(FORWARD);
   }
   else {
-    motor_right.setSpeed(255 + leftMotorSpeed);
+    motor_right.setSpeed(255 + rightMotorSpeed);
     motor_right.run(BACKWARD);
   }
 }
@@ -57,6 +57,7 @@ void init_PID() {
 }
 
 void setup() {
+  Serial.begin(9600);
   // set the status LED to output mode 
   pinMode(13, OUTPUT);
   // release motors
@@ -79,7 +80,8 @@ void loop() {
   // set motor power after constraining it
   motorPower = constrain(motorPower, -255, 255);
   setMotors(motorPower, motorPower);
- 
+  //Serial.print("Angolo misurato: "); //con la stringa non lo plotta
+  Serial.println(currentAngle);
 }
 // The ISR will be called every 5 milliseconds
 ISR(TIMER1_COMPA_vect)
