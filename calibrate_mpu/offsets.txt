@@ -1,0 +1,9 @@
+ FINISHED!
+15:45:18.130 -> 
+15:45:18.130 -> Sensor readings with offsets:	-10	-4	16391	2	1	0
+15:45:18.164 -> Your offsets:	-147	-119	5345	29	-32	42
+15:45:18.230 -> 
+15:45:18.230 -> Data is printed as: acelX acelY acelZ giroX giroY giroZ
+15:45:18.297 -> Check that your sensor readings are close to 0 0 16384 0 0 0
+15:45:18.363 -> If calibration was succesful write down your offsets so you can set them in your projects using something similar to mpu.setXAccelOffset(youroffset)
+
